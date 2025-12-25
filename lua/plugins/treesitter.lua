@@ -3,6 +3,7 @@
 -- ===========================================
 return {
   "nvim-treesitter/nvim-treesitter",
+  branch = "master",
   build = ":TSUpdate",
   event = { "BufReadPre", "BufNewFile" },
   main = "nvim-treesitter.configs",

@@ -1,17 +1,35 @@
+-- ===========================================
+-- Colorschemes
+-- ===========================================
 return {
-  "folke/tokyonight.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    require("tokyonight").setup({
-      style = "night",
-      transparent = false,
-      terminal_colors = true,
-      styles = {
-        comments = { italic = true },
-        keywords = { italic = true },
-      },
-    })
-    vim.cmd.colorscheme("tokyonight-night")
-  end,
+  -- Miasma (active)
+  {
+    "xero/miasma.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme("miasma")
+    end,
+  },
+
+  -- Catppuccin (modern, soft)
+  { "catppuccin/nvim", name = "catppuccin" },
+
+  -- OneDark (Atom style)
+  { "navarasu/onedark.nvim" },
+
+  -- Gruvbox (retro, warm)
+  { "ellisonleao/gruvbox.nvim" },
+
+  -- Kanagawa (Japanese art)
+  { "rebelot/kanagawa.nvim" },
+
+  -- Rose Pine (elegant)
+  { "rose-pine/neovim", name = "rose-pine" },
+
+  -- Dracula
+  { "Mofiqul/dracula.nvim" },
+
+  -- TokyoNight
+  { "folke/tokyonight.nvim" },
 }

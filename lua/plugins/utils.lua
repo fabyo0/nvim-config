@@ -45,4 +45,30 @@ return {
 
   -- Colorizer
   { "norcalli/nvim-colorizer.lua", event = { "BufReadPre", "BufNewFile" }, config = function() require("colorizer").setup() end },
+
+  -- Autosave
+  {
+    "pocco81/auto-save.nvim",
+    event = { "InsertLeave", "TextChanged" },
+    opts = {
+      enabled = true,
+      execution_message = { enabled = false },
+      trigger_events = { "InsertLeave", "TextChanged" },
+      debounce_delay = 1000,
+    },
+  },
+
+  -- ToggleTerm: Better terminal
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    config = function()
+      require("toggleterm").setup({
+        size = 15,
+        direction = "horizontal",
+        shade_terminals = true,
+      })
+      vim.keymap.set("n", "<leader>m", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })
+    end,
+  },
 }

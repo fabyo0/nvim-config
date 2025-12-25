@@ -77,3 +77,9 @@ require("lazy").setup("plugins", {
 
 -- Keymaps
 require("keymaps")
+
+-- Autosave: Focus kaybedince veya buffer değişince kaydet
+vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
+  pattern = "*",
+  command = "silent! wa",
+})

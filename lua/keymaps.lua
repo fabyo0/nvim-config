@@ -74,3 +74,6 @@ keymap("t", "<Esc>", "<C-\\><C-n>", { desc = "Terminal'den çık" })
 keymap("n", "<leader>vc", ":e ~/.config/nvim/init.lua<CR>", { desc = "Config aç" })
 keymap("n", "<leader>vp", ":e ~/.config/nvim/lua/plugins/<CR>", { desc = "Plugins klasörü" })
 keymap("n", "<leader>vr", ":source ~/.config/nvim/init.lua<CR>", { desc = "Config yenile" })
+
+-- ToggleTerm shortcut
+keymap("n", "<leader>m", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })
