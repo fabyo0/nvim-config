@@ -1,3 +1,6 @@
+-- ===========================================
+-- Mason: LSP/DAP/Linter Manager
+-- ===========================================
 return {
   {
     "williamboman/mason.nvim",
@@ -20,7 +23,11 @@ return {
     dependencies = { "williamboman/mason.nvim" },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "gopls", "lua_ls" },
+        ensure_installed = { 
+          "gopls",        -- Go
+          "lua_ls",       -- Lua
+          "intelephense", -- PHP
+        },
         automatic_installation = true,
       })
     end,

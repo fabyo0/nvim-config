@@ -2,15 +2,19 @@
 -- Colorschemes
 -- ===========================================
 return {
-  -- Miasma (active)
+  -- Darcula Dark (active)
   {
-    "xero/miasma.nvim",
+    "xiantang/darcula-dark.nvim",
     lazy = false,
     priority = 1000,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
     config = function()
-      vim.cmd.colorscheme("miasma")
+      vim.cmd.colorscheme("darcula-dark")
     end,
   },
+
+  -- Miasma
+  { "xero/miasma.nvim" },
 
   -- Catppuccin (modern, soft)
   { "catppuccin/nvim", name = "catppuccin" },

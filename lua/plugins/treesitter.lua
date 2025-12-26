@@ -13,7 +13,7 @@ return {
       "lua", "vim", "vimdoc", 
       "json", "yaml", "toml", 
       "markdown", "markdown_inline", 
-      "bash", "dockerfile", "sql" 
+      "bash", "dockerfile", "sql","php","python" 
     },
     auto_install = true,
     highlight = { enable = true },

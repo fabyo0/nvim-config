@@ -77,3 +77,13 @@ keymap("n", "<leader>vr", ":source ~/.config/nvim/init.lua<CR>", { desc = "Confi
 
 -- ToggleTerm shortcut
 keymap("n", "<leader>m", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })
+
+-- PHP: Import class under cursor
+keymap("n", "<leader>i", function()
+  vim.lsp.buf.code_action({
+    filter = function(action)
+      return action.title:match("Import")
+    end,
+    apply = true,
+  })
+end, { desc = "Import class" })
