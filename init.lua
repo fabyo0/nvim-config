@@ -101,3 +101,6 @@ vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
   pattern = "*",
   command = "silent! wa",
 })
+
+-- Ctrl+Click ile definition'a git
+vim.keymap.set("n", "<C-LeftMouse>", "<LeftMouse><cmd>lua vim.lsp.buf.definition()<CR>", { desc = "Go to definition" })

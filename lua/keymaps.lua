@@ -87,3 +87,7 @@ keymap("n", "<leader>i", function()
     apply = true,
   })
 end, { desc = "Import class" })
+
+-- Buffer kapat
+keymap("n", "<leader>bd", ":bd<CR>", { desc = "Close buffer" })
+keymap("n", "<leader>bo", ":%bd|e#<CR>", { desc = "Close other buffers" })
